@@ -12,6 +12,8 @@ var SongQueue = Songs.extend({
       this.remove(song);
       if (this.length > 0) {
         this.playFirst();
+      } else {
+        this.trigger('empty');
       }
     });
 
@@ -23,6 +25,5 @@ var SongQueue = Songs.extend({
   playFirst: function(){
     this.first().play();
   }
-
 });
 

@@ -2,7 +2,6 @@ describe('PlayerView', function() {
   var library, appView;
 
   beforeEach(function() {
-
     library = new Songs([
       {
         url: "mp3s/08 4 Page Letter.mp3",
@@ -52,5 +51,4 @@ describe('PlayerView', function() {
       expect(appView.playerView.model).to.equal(thirdSong);
     });
   });
-
 });

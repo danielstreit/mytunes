@@ -3,16 +3,16 @@ describe('SongQueueView', function() {
 
   beforeEach(function() {
     fakeSongs = new SongQueue([
-      {
+      new SongModel ({
         artist: 'data',
         url: '/test/testsong.mp3',
         title:'test song'
-      },
-      {
+      }),
+      new SongModel ({
         artist: 'data',
         url: '/test/testsong2.mp3',
         title:'test song 2'
-      }
+      })
     ]);
   });
 
@@ -34,5 +34,4 @@ describe('SongQueueView', function() {
     view.collection.pop();
     expect(view.render).to.have.been.called;
   });
-
 });

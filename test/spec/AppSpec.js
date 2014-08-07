@@ -31,5 +31,4 @@ describe('App', function() {
     app.get('library').at(1).enqueue();
     expect(app.get('songQueue').at(0)).to.equal(app.get('library').at(1));
   });
-
 });
